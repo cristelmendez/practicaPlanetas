@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PracticaPlanetas</string>
+    <string name="nombre">Nombre:</string>
+    <string name="kilometro">Kilometors de Distancia del Sol:</string>
+
+
+</resources>
