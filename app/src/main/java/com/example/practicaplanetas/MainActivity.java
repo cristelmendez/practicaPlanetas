@@ -10,8 +10,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-    @Override
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -33,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getApplicationContext(),"Seleccionaste : "+nombre[i],Toast.LENGTH_LONG).show();
+                Intent intent =new Intent(getApplicationContext(),AdapterListFruit.class)
+                intent.putExtra("",R.drawable.mercurio);
+                startActivity(intent);
+
 
             }
         });
@@ -41,13 +44,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getApplicationContext(),"los kilometros hacia el sol son :"+kilometro[i], Toast.LENGTH_LONG).show();
+                Intent intent =new Intent(getApplicationContext(),AdapterListFruit.class);
+                startActivity(intent);
                 return true;
             }
         });
 
 
-        Intent intent1 = new Intent(this,AdapterListFruit.class);
-        intent1.putExtra("cool",R.drawable.mercurio);
+
+
 
 
     }
